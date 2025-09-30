@@ -1,0 +1,19 @@
+# Dockerfile_LLM (Place this file in the backend/ directory)
+
+# Use a lightweight Python base image
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Copy and install Python dependencies (requirements.txt is in the build context: backend/)
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the core script and any configuration files
+COPY llm_service.py .
+
+# Mount the model weights later via docker-compose, but use the path they will be at
+# The model will be mounted to /app/models inside the container
+
+# Command to run the FastAPI/Flask service
+CMD ["uvicorn", "llm_service:app", "--host", "0.0.0.0", "--port", "8000"]
