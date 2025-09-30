@@ -1,0 +1,12 @@
+# Core LLM Libraries
+torch               # PyTorch (or tensorflow if you chose that backend)
+transformers        # Hugging Face library for t5-small model
+datasets            # For loading/managing Hugging Face datasets
+
+# LLM Service Libraries
+fastapi             # Framework for creating the API endpoints
+uvicorn             # ASGI Server to run the FastAPI app (very fast)
+
+# Data Preprocessing/Utility
+pandas              # For data handling
+thefuzz[speedup]    # For fast Levenshtein distance calculations
