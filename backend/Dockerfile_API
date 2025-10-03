@@ -1,14 +1,3 @@
-# Stage 1: Build Stage
-FROM node:18-alpine AS builder
-WORKDIR /app
-
-# Copy and install dependencies first for better caching
-COPY package*.json ./
-RUN npm install
-
-# Copy all application source code
-COPY . .
-
-# Command to run the application (using 'npm start' or 'npm run dev')
-# Assuming 'dev' script for local development with hot-reloading
-CMD ["npm", "run", "dev"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d5f1a62b03f6f4c44a16d042d77796a3c0fa7dae8763f1481b8be72d343e0da
+size 382
