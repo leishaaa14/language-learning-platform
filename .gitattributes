@@ -1,3 +1,3 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1c16f0c2ae78a42c0490685cfac3bb87e9caaab3f04991485a5109ce79772086
-size 166
+backend/models/fine-tuned-t5/*.bin filter=lfs diff=lfs merge=lfs -text
+backend/datasets/*.arrow filter=lfs diff=lfs merge=lfs -text
+backend/datasets/*.csv filter=lfs diff=lfs merge=lfs -text
